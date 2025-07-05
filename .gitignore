@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+supabase/
+auth_backup.sql
+auth_data_dump.sql
+vite.config.ts.timestamp-*
+*.sql
