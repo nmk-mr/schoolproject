@@ -116,7 +116,7 @@ const CreateAssignment: React.FC = () => {
       console.log("Assignment created successfully:", data);
       toast({
         title: 'Success',
-        description: `${category} has been created successfully.`,
+        description: `Assignment has been created successfully.`,
       });
 
       navigate('/teacher');
@@ -231,7 +231,7 @@ const CreateAssignment: React.FC = () => {
                       accept=".pdf,.doc,.docx,.xls,.xlsx,.txt,.jpeg,.jpg,.png,.gif"
                     />
                     <p className="text-sm text-muted-foreground">
-                      Supported formats: PDF, Word, Excel, Text, Images (max 10MB)
+                      Supported formats: PDF, Word, Excel, Text, Images
                     </p>
                     {file && (
                       <p className="text-sm text-muted-foreground">

@@ -280,7 +280,9 @@ const StudentDashboard: React.FC<StudentDashboardProps> = () => {
               </CardHeader>
               <CardContent>
                 {isLoading ? (
-                  <div>Loading assignments...</div>
+                  <div className="flex justify-center py-12">
+                    <div className="w-12 h-12 border-4 border-t-mtu-primary border-r-mtu-primary border-b-mtu-light border-l-mtu-light rounded-full animate-spin"></div>
+                  </div>
                 ) : assignments.length === 0 ? (
                   <div>No assignments found for your year.</div>
                 ) : (
@@ -308,7 +310,9 @@ const StudentDashboard: React.FC<StudentDashboardProps> = () => {
               </CardHeader>
               <CardContent>
                 {isLoading ? (
-                  <div>Loading tutorials...</div>
+                  <div className="flex justify-center py-12">
+                    <div className="w-12 h-12 border-4 border-t-mtu-primary border-r-mtu-primary border-b-mtu-light border-l-mtu-light rounded-full animate-spin"></div>
+                  </div>
                 ) : tutorials.length === 0 ? (
                   <div>No tutorials found for your year.</div>
                 ) : (
@@ -336,7 +340,9 @@ const StudentDashboard: React.FC<StudentDashboardProps> = () => {
               </CardHeader>
               <CardContent>
                 {isLoading ? (
-                  <div>Loading lab reports...</div>
+                  <div className="flex justify-center py-12">
+                    <div className="w-12 h-12 border-4 border-t-mtu-primary border-r-mtu-primary border-b-mtu-light border-l-mtu-light rounded-full animate-spin"></div>
+                  </div>
                 ) : labReports.length === 0 ? (
                   <div>No lab reports found for your year.</div>
                 ) : (

@@ -307,8 +307,8 @@ const SubmissionsView: React.FC = () => {
       
       if (numericGrade !== null && (isNaN(numericGrade) || numericGrade < 0 || numericGrade > 100)) {
         toast({
-          title: 'Invalid Grade',
-          description: 'Grade must be a number between 0 and 100.',
+          title: 'Invalid Marks',
+          description: 'Marks must be a number between 0 and 100.',
           variant: 'destructive',
         });
         return;
@@ -339,7 +339,7 @@ const SubmissionsView: React.FC = () => {
         .single();
         
       if (assignmentError || !assignment) {
-        throw new Error('You do not have permission to grade this submission');
+        throw new Error('You do not have permission to mark this submission');
       }
       
       // Perform the update
@@ -370,7 +370,7 @@ const SubmissionsView: React.FC = () => {
       
       toast({
         title: 'Success',
-        description: 'Grade and feedback saved successfully!',
+        description: 'Marks and feedback saved successfully!',
       });
       
       setIsDialogOpen(false);
@@ -454,7 +454,7 @@ const SubmissionsView: React.FC = () => {
                   <TableHead>Student Name</TableHead>
                   <TableHead>Submitted On</TableHead>
                   <TableHead>File</TableHead>
-                  <TableHead>Grade</TableHead>
+                  <TableHead>Marks</TableHead>
                   <TableHead className="text-right">Actions</TableHead>
                 </TableRow>
               </TableHeader>
@@ -476,7 +476,7 @@ const SubmissionsView: React.FC = () => {
                     <TableCell>
                       {submission.grade !== undefined && submission.grade !== null
                         ? `${submission.grade}/100`
-                        : 'Not graded'}
+                        : 'Not marked'}
                     </TableCell>
                     <TableCell className="text-right space-x-2">
                       <div className="flex justify-end gap-2">
@@ -545,7 +545,7 @@ const SubmissionsView: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="grade">Grade (0-100)</Label>
+                    <Label htmlFor="grade">Marks (0-100)</Label>
                     <Input
                       id="grade"
                       type="number"
@@ -553,7 +553,7 @@ const SubmissionsView: React.FC = () => {
                       max="100"
                       value={grade}
                       onChange={(e) => setGrade(e.target.value)}
-                      placeholder="Enter grade"
+                      placeholder="Enter marks"
                     />
                   </div>
                   

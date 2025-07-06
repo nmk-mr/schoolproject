@@ -183,7 +183,7 @@ const TeacherDashboard: React.FC = () => {
                   onClick={handleCreateNew}
                   className="mt-4"
                 >
-                  Create your first assignment
+                  Create your first Assignment
                 </Button>
               </div>
             )}
@@ -213,7 +213,7 @@ const TeacherDashboard: React.FC = () => {
                   onClick={handleCreateNew}
                   className="mt-4"
                 >
-                  Create your first tutorial
+                  Create your first Tutorial
                 </Button>
               </div>
             )}
@@ -243,7 +243,7 @@ const TeacherDashboard: React.FC = () => {
                   onClick={handleCreateNew}
                   className="mt-4"
                 >
-                  Create your first lab report
+                  Create your first Lab Instruction
                 </Button>
               </div>
             )}

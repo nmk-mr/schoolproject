@@ -205,7 +205,7 @@ const AssignmentView: React.FC<AssignmentViewProps> = () => {
       setSubmission(submissionData);
       
       toast({
-        title: 'Success!',
+        title: 'Success',
         description: submission ? 'Your submission has been updated.' : 'Your assignment has been submitted successfully!',
       });
       
@@ -361,7 +361,7 @@ const AssignmentView: React.FC<AssignmentViewProps> = () => {
     if (hasFeedbackOrGrade) {
       toast({
         title: 'Cannot Delete',
-        description: 'You cannot delete a submission that has already been graded or received feedback.',
+        description: 'You cannot delete a submission that has already been marked or received feedback.',
         variant: 'destructive',
       });
       return;
@@ -563,7 +563,7 @@ const AssignmentView: React.FC<AssignmentViewProps> = () => {
                 {submission.grade !== undefined && submission.grade !== null ? (
                   <div className="space-y-4">
                     <div className="bg-gray-50 p-4 rounded">
-                      <p className="font-medium mb-1">Grade:</p>
+                      <p className="font-medium mb-1">Marks:</p>
                       <p className="text-2xl font-bold text-mtu-primary">
                         {submission.grade}/100
                       </p>
@@ -583,7 +583,7 @@ const AssignmentView: React.FC<AssignmentViewProps> = () => {
                   </div>
                 ) : (
                   <div className="text-center py-8">
-                    <p className="text-gray-500">Your submission hasn't been graded yet.</p>
+                    <p className="text-gray-500">Your submission hasn't been marked yet.</p>
                   </div>
                 )}
               </CardContent>
